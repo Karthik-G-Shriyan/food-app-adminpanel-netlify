@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/admin/foods";
+const API_URL = "https://online-food-application-backend-railway-app-production.up.railway.app/api/admin/foods";
 
 // Add food
 export const addFood = async (token, foodData, image) => {
@@ -72,7 +72,7 @@ export const getAllFoods = async (token) => {
 //delete food by id
  export const deleteFoodById = async (token, id) => {
 try {
-      await axios.delete(`http://localhost:8080/api/admin/foods/${id}`, {
+      await axios.delete(`https://online-food-application-backend-railway-app-production.up.railway.app/api/admin/foods/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

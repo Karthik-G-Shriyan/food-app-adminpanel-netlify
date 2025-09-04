@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/admin/orders";
+const API_URL = "https://online-food-application-backend-railway-app-production.up.railway.app/api/admin/orders";
 
 export const getAllOrders = async (token) => {
 

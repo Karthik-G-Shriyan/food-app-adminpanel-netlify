@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { login } from '../../service/AuthService';
 import { MdEmail, MdLock, MdVisibility, MdVisibilityOff } from 'react-icons/md';
-import './login.css'; 
+import './Login.css'; 
 
 const Login = () => {
     const navigate = useNavigate();

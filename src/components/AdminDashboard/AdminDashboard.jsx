@@ -25,7 +25,7 @@ const AdminDashboard = () => {
 
   const handleLogout = () => {
     console.log('Logout clicked');
-    localStorage.removeItem('token');
+    sessionStorage.removeItem('token');
     setToken("");
     navigate('/login');
   };

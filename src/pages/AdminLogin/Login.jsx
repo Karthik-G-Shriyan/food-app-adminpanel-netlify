@@ -34,11 +34,11 @@ const Login = () => {
             const response = await login(data);
             if (response.status === 200) {
                 setToken(response.data.token);
-                localStorage.setItem('token', response.data.token);
+                sessionStorage.setItem('token', response.data.token);
                 toast.success('Login successful!');
                 navigate("/");
             } else {
-                toast.error('Unable to login. Please try again!');
+                toast.error('invalid email and password please try again.!');
             }
         } catch (error) {
             console.log('error while logging in', error);

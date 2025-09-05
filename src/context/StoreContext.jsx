@@ -4,7 +4,7 @@ export const StoreContext = createContext(null);
 
 export const StoreContextProvider = (props) => {
 
-    const [token, setToken] = useState(() => localStorage.getItem("token") || null);
+    const [token, setToken] = useState(() => sessionStorage.getItem("token") || null);
 
 
     const contextValue = {
@@ -14,9 +14,9 @@ export const StoreContextProvider = (props) => {
 
     useEffect( () => {
 
-        if(localStorage.getItem("token"))
+        if(sessionStorage.getItem("token"))
         {
-            setToken(localStorage.getItem("token"));
+            setToken(sessionStorage.getItem("token"));
         }
     }, []);
 
